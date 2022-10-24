@@ -1,0 +1,369 @@
+@import url("fonts/YanoneKaffeesatz.css");
+@import url("fonts/OpenSans.css");
+
+:root {
+  --Caveat: "Caveat", cursive;
+  --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+  --OpenSans: "Open Sans", sans-serif;
+
+  --section-spacing: 2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: whitesmoke;
+}
+
+main {
+  font-family: var(--OpenSans);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  align-self: center;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.shadow {
+  box-shadow: 0 0 5px 0 lightgrey;
+}
+
+.title-group {
+  margin-top: 0 !important;
+  padding: 1rem 2rem;
+  font-size: 25pt;
+  border-left: 3px solid green;
+}
+
+.subtitle {
+  font-size: 15pt;
+  color: green;
+}
+
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+.hero {
+  min-height: 400px;
+  height: 100vh;
+  background: url("../img/static/home-hero.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--YanoneKaffeesatz) !important;
+  letter-spacing: 2px;
+}
+
+header .container div:first-child {
+  align-self: center;
+  font-size: 15pt;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header .container div:first-child span {
+  color: green;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+}
+
+.nav-links a:hover {
+  border-top-color: green;
+}
+
+.nav-links p {
+  padding: 1rem 2rem;
+  transition: 0.2s;
+}
+
+.nav-links a:last-child {
+  background-color: green;
+  color: white;
+}
+
+.nav-links a:hover p,
+header .container div:first-child:hover {
+  transform: scale(1.1);
+}
+
+.hero > .content {
+  margin-top: -2rem;
+  display: flex;
+  padding: 5rem 2rem;
+  height: 100%;
+  align-items: center;
+  font-family: var(--OpenSans);
+  color: white;
+  background-color: rgba($color: black, $alpha: 0.2);
+}
+
+.hero > .content > div > div:first-child {
+  color: black;
+}
+
+.hero > .content > div > div {
+  margin: 1rem 0;
+}
+
+.hero > .content h1 {
+  font-size: 30pt;
+}
+
+.hero .btn-group {
+  display: flex;
+}
+
+.hero .btn-group div {
+  margin: 0 1rem;
+}
+
+.hero .btn-group div:first-child {
+  margin-left: 0;
+}
+
+.hero .btn-group div:nth-child(1) button {
+  margin-left: 0;
+  background: none;
+  padding: 0.7rem 1rem;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.hero .btn-group div:nth-child(1) button:hover {
+  background-color: white;
+  color: black;
+}
+
+.hero .btn-group div:nth-child(2) button {
+  height: 100%;
+  width: 2.5rem;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  color: green;
+
+  box-shadow: 0 0 0 0 rgba($color: white, $alpha: 1);
+  transform: scale(1);
+  animation: pulse-white 2s infinite;
+}
+
+.about {
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
+}
+
+.about img {
+  width: 100%;
+}
+
+.about > div {
+  display: grid;
+  grid-template-columns: 1fr 60%;
+  grid-gap: 1rem;
+}
+
+.about > div > div:first-child {
+  background-image: url("../img/static/home-about.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about .content > div {
+  margin: 1rem;
+}
+
+.about .content > div:last-child {
+  margin-bottom: 0;
+}
+
+.about .content div:nth-child(2) {
+  font-weight: bold;
+}
+
+.about .content div:nth-child(3) {
+  background-color: lightgrey;
+  padding: 1.5rem;
+}
+
+.about .content button {
+  width: 50%;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.about .content button:first-child {
+  background-color: green;
+  color: white;
+}
+
+.about .content > div:last-child p {
+  font-weight: 100;
+}
+
+.services > div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  grid-gap: 2rem;
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
+}
+
+.services > div:last-child > div {
+  background-color: lightgrey;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+}
+
+.services > div:last-child > div > div:first-child {
+  align-self: center;
+}
+
+.services > div:last-child span,
+.services > div:last-child a {
+  color: green;
+}
+
+.services > div:last-child span {
+  font-size: 30pt;
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+
+.services > div div div p {
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.services > div div div p:first-child {
+  font-weight: bold;
+}
+
+footer {
+  background-color: lightgrey;
+  padding: var(--section-spacing) 0;
+  font-family: var(--OpenSans);
+  padding-bottom: 0;
+}
+
+footer p {
+  font-weight: 100;
+}
+
+footer .container > div:first-child {
+  display: flex;
+}
+
+footer .container > div:first-child > div {
+  width: 25%;
+  padding: 0 1rem;
+}
+
+footer .container > div:first-child > div p:first-child {
+  font-weight: bold;
+  padding-left: 2rem;
+  border-left: 2px solid green;
+  margin-bottom: 1rem;
+}
+
+footer .container > div:first-child > div p:first-child + p {
+  margin-bottom: 1rem;
+}
+
+footer .container > div:first-child > div span {
+  display: inline-flex;
+  width: 20px;
+  justify-content: center;
+  color: green;
+}
+
+footer .container > div:last-child {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 100;
+}
+
+footer > div:last-child {
+  background-color: black;
+}
+
+footer > div > .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: grey;
+}
+
+footer > div > .container span {
+  color: white;
+}
+
+footer > .container > div > div > a {
+  display: block;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba($color: white, $alpha: 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba($color: white, $alpha: 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba($color: white, $alpha: 0);
+  }
+}
