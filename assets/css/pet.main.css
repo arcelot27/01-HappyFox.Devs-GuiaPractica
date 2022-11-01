@@ -5,6 +5,8 @@
   --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
   --OpenSans: "Open Sans", sans-serif;
   --section-spacing: 2rem;
+  --principal-color: pink;
+  --bg-principal-color: whitesmoke;
 }
 
 * {
@@ -40,12 +42,12 @@ a {
   margin-top: 0 !important;
   padding: 1rem 2rem;
   font-size: 25pt;
-  border-left: 3px solid green;
+  border-left: 3px solid var(--principal-color);
 }
 
 .subtitle {
   font-size: 15pt;
-  color: green;
+  color: var(--principal-color);
 }
 
 header {
@@ -57,6 +59,7 @@ header {
 
 .hero {
   min-height: 400px;
+  max-height: 1000px;
   height: 100vh;
   background: url("../img/static/home-hero.jpg");
   background-size: cover;
@@ -78,7 +81,7 @@ header .container div:first-child {
 }
 
 header .container div:first-child span {
-  color: green;
+  color: var(--principal-color);
 }
 
 .nav-links {
@@ -93,7 +96,7 @@ header .container div:first-child span {
 }
 
 .nav-links a:hover {
-  border-top-color: green;
+  border-top-color: var(--principal-color);
 }
 
 .nav-links p {
@@ -102,8 +105,17 @@ header .container div:first-child span {
 }
 
 .nav-links a:last-child {
-  background-color: green;
+  background-color: var(--principal-color);
   color: white;
+}
+
+
+.nav-links button {
+  display: none;
+  color: var(--principal-color);
+  border: none;
+  background-color: white;
+  font-size: 15pt;
 }
 
 .nav-links a:hover p,
@@ -167,7 +179,7 @@ header .container div:first-child:hover {
   background-color: white;
   border: none;
   border-radius: 50%;
-  color: green;
+  color: var(--principal-color);
   box-shadow: 0 0 0 0 white;
   transform: scale(1);
   -webkit-animation: pulse-white 2s infinite;
@@ -221,7 +233,7 @@ header .container div:first-child:hover {
 }
 
 .about .content button:first-child {
-  background-color: green;
+  background-color: var(--principal-color);
   color: white;
 }
 
@@ -250,7 +262,7 @@ header .container div:first-child:hover {
 
 .services > div:last-child span,
 .services > div:last-child a {
-  color: green;
+  color: var(--principal-color);
 }
 
 .services > div:last-child span {
@@ -270,6 +282,7 @@ header .container div:first-child:hover {
 
 footer {
   background-color: lightgrey;
+  margin-top: var(--section-spacing);
   padding: var(--section-spacing) 0;
   font-family: var(--OpenSans);
   padding-bottom: 0;
@@ -291,7 +304,7 @@ footer .container > div:first-child > div {
 footer .container > div:first-child > div p:first-child {
   font-weight: bold;
   padding-left: 2rem;
-  border-left: 2px solid green;
+  border-left: 2px solid var(--principal-color);
   margin-bottom: 1rem;
 }
 
@@ -303,7 +316,7 @@ footer .container > div:first-child > div span {
   display: inline-flex;
   width: 20px;
   justify-content: center;
-  color: green;
+  color: var(--principal-color);
 }
 
 footer .container > div:last-child {
@@ -332,6 +345,82 @@ footer > .container > div > div > a {
   display: block;
 }
 
+footer .links {
+  display: flex;
+  justify-content: center;
+}
+
+footer .links {
+  color: gray;
+}
+
+footer .links p {
+  transition: .5s;
+}
+
+footer .links p:hover {
+  transform: scale(1.1);
+  margin: 0 .5rem;
+  color: black;
+}
+
+.newsletter {
+  display: flex;
+}
+
+.newsletter input {
+  background: var(--bg-principal-color);
+  border: none;
+  padding: .5rem 1rem;
+  width: 60%;
+}
+
+.newsletter button {
+  display: flex;
+  padding: .5rem 1rem;
+  background: var(--bg-principal-color);
+  border: solid transparent;
+  color: var(--principal-color);
+}
+
+.products .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: var(--section-spacing);
+}
+
+.products .items > div {
+  display: grid;
+}
+
+.products .items img {
+  width: 100%;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+
+.products .item-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background-color: var(--principal-color);
+  color: white;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  font-family: var(--OpenSans);
+}
+
+.products .item-detail > p {
+  font-size: 15pt;
+  align-self: center;
+}
+
+.products .item-detail div p:first-child {
+  font-size: 15pt;
+}
+
 @media screen and (max-width: 1100px) {
   .container {
     width: 900px;
@@ -341,12 +430,48 @@ footer > .container > div > div > a {
   .container {
     width: 800px;
   }
+  
+  .nav-links p {
+    padding-left: .6rem;
+    padding-right: .6rem;
+  }
 }
 @media screen and (max-width: 900px) {
   .container {
     width: 700px;
   }
 }
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+
+  header .container {
+    padding: 0 .5rem;
+  }
+
+  .about > div{
+    display: block;
+  }
+
+  .about > div > div:first-child {
+    height: 500px;
+  }
+
+  .about .content {
+    margin-top: var(--section-spacing);
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav-links a {
+    display: none;
+  }
+
+  .nav-links button {
+    display: block;
+  }
+}
+
 @-webkit-keyframes pulse-white {
   0% {
     transform: scale(0.95);

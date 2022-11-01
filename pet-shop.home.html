@@ -21,6 +21,9 @@
                         <p><span><i class="fa-solid fa-shop"></i></span> Mascotas</p>
                     </div>
                     <div class="nav-links">
+                        <button>
+                            <p><i class="fa-solid fa-bars"></i></p>
+                        </button>
                         <a href="#">
                             <p>INICIO</p>
                         </a>
@@ -58,7 +61,7 @@
                             <button>LEER MAS</button>
                         </div>
                         <div>
-                            <button><i class="fa-solid fa-play"></i></button> <span>Reproducir</span>
+                            <button class="play-meow"><i class="fa-solid fa-play"></i></button> <span>Reproducir</span>
                         </div>
                         <div>
                         </div>
@@ -68,7 +71,7 @@
         </div>
         <div class="container about">
             <div>
-                <div>
+                <div class="shadow">
                 </div>
                 <div class="content">
                     <div class="title-group">
@@ -163,7 +166,44 @@
                 <p class="subtitle">Productos</p>
                 <p>Productos para tus mascotas</p>
             </div>
-
+            <div class="items">
+                <div class="shadow">
+                    <img src="assets/img/static/don kat.jpg" alt="">
+                    <div class="item-detail">
+                        <div>
+                            <p>Don Kat</p><p>$ 5.000</p>
+                        </div>
+                        <p><i class="fa-solid fa-shopping-cart"></i></p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="assets/img/static/miringo.jpg" alt="">
+                    <div class="item-detail">
+                        <div>
+                            <p>Don Kat</p><p>$ 5.000</p>
+                        </div>
+                        <p><i class="fa-solid fa-shopping-cart"></i></p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="assets/img/static/q-ida cat.jpg" alt="">
+                    <div class="item-detail">
+                        <div>
+                            <p>Don Kat</p><p>$ 5.000</p>
+                        </div>
+                        <p><i class="fa-solid fa-shopping-cart"></i></p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="assets/img/static/smart.jpg" alt="">
+                    <div class="item-detail">
+                        <div>
+                            <p>Don Kat</p><p>$ 5.000</p>
+                        </div>
+                        <p><i class="fa-solid fa-shopping-cart"></i></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -220,9 +260,9 @@
                 </div>
                 <div>
                     <p>Boletín</p>
-                    <div>
-                        <input type="text"><label for=""><i class="fa-solid fa-paper-plane"></i></label>
-                    </div>
+                    <form class="newsletter">
+                        <input type="text"><label for=""><button><i class="fa-solid fa-paper-plane"></i></button></label>
+                    </form>
                     <br>
                     <p>Síguenos</p>
                     <div>
@@ -233,18 +273,31 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Customer Support</a> |
-                <a href="#">Payments</a> | <a href="#">Help</a> | <a href="#">FAQs</a>
+            <div class="links">
+                <p class="link"><a href="#">Terms & Conditions</a></p>
+                 | 
+                <p class="link"><a href="#">Privacy Policy</a></p>
+                 | 
+                <p class="link"><a href="#">Customer Support</a></p>
+                 |
+                <p class="link"><a href="#">Payments</a></p>
+                 | 
+                <p class="link"><a href="#">Help</a></p>
+                 | 
+                <p class="link"><a href="#">FAQs</a></p>
             </div>
         </div>
         <div>
             <div class="container">
                 <p>&copy; <span>Mascotas</span> Todos los derechos reservados</p>
-                <p>Designed by <span>HappyFox Devs</span></p>
+                <p>Designed by <span><a href="#">HappyFox Devs</a></span></p>
             </div>
         </div>
     </footer>
+    <div style="display: none">
+        <audio class="meow" src="assets/audio/meow.mpeg"></audio>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
