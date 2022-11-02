@@ -1,11 +1,12 @@
 @import url("fonts/YanoneKaffeesatz.css");
 @import url("fonts/OpenSans.css");
+
 :root {
   --Caveat: "Caveat", cursive;
   --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
   --OpenSans: "Open Sans", sans-serif;
   --section-spacing: 2rem;
-  --principal-color: pink;
+  --principal-color: green;
   --bg-principal-color: whitesmoke;
 }
 
